@@ -104,7 +104,7 @@ function Write-Log {                          # Declara una función llamada Wri
         }
 
         default {
-            throw "Unknown parameter set: $($PsCmdlet.ParameterSetName)"  # Error si se invoca con un set no contemplado
+            throw "Unknown parameter set: $($PsCmdlet.ParameterSetName)"  # esto hace que un Error se invoque con un set no contemplado
         }
     }
 }
