@@ -16,9 +16,9 @@ function Start-ProgressBar {
          # $Title → nombre del primer parámetro, sin tipo explícito (acepta cualquier tipo).
         [Parameter(Mandatory = $true)]
         [int]$Timer
+    )
         # [int] → tipo entero de 32 bits; fuerza que Timer sea un número entero.
         #$Timer → nombre del segundo parámetro: cantidad de segundos del temporizador.
-        
     for ($i = 1; $i -le $Timer; $i++) {
         #for → bucle for clásico (inicialización; condición; incremento).
         # $i = 1 → variable de contador inicia en 1 (primer segundo).
