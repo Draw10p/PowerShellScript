@@ -51,7 +51,7 @@ function Write-Log {                          # Declara una función llamada Wri
             $folderPath = New-FolderCreation -foldername $folder
 
             foreach ($n in $namesArray) {              # Itera por cada nombre base
-                # Sanitiza a string explícito
+                # Limpia y verefica que vaya a string explícito
                 $baseName = [string]$n
 
                 # Construye el nombre del archivo: Base_YYYY-MM-DD_HH-mm-ss.ext
