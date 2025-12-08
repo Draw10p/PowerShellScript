@@ -10,10 +10,14 @@ $form.Size = New-Object System.Drawing.Size(500,250)        # Tamaño (ancho x a
 $form.StartPosition = "CenterScreen"                        # Centrar en pantalla
 
 # Se crea etiquetas para cada campo
+# Crear la etiqueta (Label) para "Input 1"
 $textLabel1 = New-Object System.Windows.Forms.Label
+# Texto que se mostrará en la etiqueta
 $textLabel1.Text = "Input 1:"
+# Posición en el formulario: 20px desde la izquierda, 100px desde arriba
 $textLabel1.Left = 20
 {textLabel1.Top = 20}
+# Ancho de la etiqueta en píxeles
 {textLabel1.Width = 120}
 
 $textLabel2 = New-Object System.Windows.Forms.Label
@@ -30,8 +34,11 @@ $textLabel3 = New-Object System.Windows.Forms.Label
 
 # Se crean las cajas de texto alineadas con las etiquetas
 $textBox1 = New-Object System.Windows.Forms.TextBox
+# Posición horizontal (X) para alinearla a la derecha de la etiqueta
 $textBox1.Left = 150
+# Posición vertical (Y) a la altura de la etiqueta "Input 1:"
 $textBox1.Top = 20
+# Ancho de la caja (en píxeles)
 $textBox1.Width = 200
 
 $textBox2 = New-Object System.Windows.Forms.TextBox
@@ -65,7 +72,7 @@ $button.Add_Click({
         Box2 = $textBox2.Text
         Box3 = $textBox3.Text
     }
-    $form.Close()
+    $form.Close() # # Cierra el formulario (ShowDialog() devolverá el control al script)
 })
 
 # Se agrega todos los controles a la ventana
@@ -78,7 +85,7 @@ $form.Controls.Add($textBox2)
 $form.Controls.Add($textBox3)
 
 # Mostramos el formulario como diálogo modal (bloqueado hasta que sea cerradp)
-$form.ShowDialog() | Out-Null
+$form.ShowDialog() | Out-Null 
 
 # Devolvemos los valores capturados
 return $form.Tag.Box1, $form.Tag.Box2, $form.Tag.Box3
