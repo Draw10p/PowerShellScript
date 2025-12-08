@@ -20,11 +20,11 @@ function Start-ProgressBar {
         # [int] → tipo entero de 32 bits; fuerza que Timer sea un número entero.
         #$Timer → nombre del segundo parámetro: cantidad de segundos del temporizador.
     for ($i = 1; $i -le $Timer; $i++) {
-        #for → bucle for clásico (inicialización; condición; incremento).
-        # $i = 1 → variable de contador inicia en 1 (primer segundo).
+        #for → se crea un bucle
+        # $i = 1 → es una variable de contador inicia en 1
         # ; → separador entre las partes del for.
         # $i -le $Timer → condición: mientras i sea menor o igual que Timer.
-        # -le → operador “less than or equal” (≤) en PowerShell
+        # -le → operador “less than or equal” en PowerShell
         # $i++ → suma 1 a $i encada iteración.
         # { → inicio del bloque del bucle.
 
@@ -45,7 +45,7 @@ function Start-ProgressBar {
     }
 } 
 
-# Call the function
+# Hacemos una llamada a la función
 Start-ProgressBar -Title "Test timeout" -Timer 30
 # Start-ProgressBar → invoca la función por su nombre.
 # -Title "Test timeout" → pasa el argumento Title con el texto “Test timeout”.
