@@ -1,5 +1,5 @@
 
-function Write-Log {                          # Declara una función llamada Write-Log
+function New-FolderCreation {                          # Declara una función New-FolderCreation
     [CmdletBinding()]                         # Función avanzada (estilo cmdlet)
     param(
         # --- Conjunto de parámetros: que funciona para crear archivos
